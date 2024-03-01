@@ -2,7 +2,8 @@
 
 error_reporting(0);
 require_once('../config/sesiones.php');
-require_once('../models/cliente.models.php'); 
+require_once('../models/cliente.models.php');
+require_once('../wiews/cliente/cliente.views.php'); 
 $Cliente = new Cliente(); 
 
 switch ($_GET['op']) {

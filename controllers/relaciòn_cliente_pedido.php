@@ -4,6 +4,9 @@ require_once('../config/sesiones.php');
 require_once('../models/cliente.models.php');
 require_once('../models/pedido.models.php');
 require_once('../models/realiza.models.php');
+require_once('../wiews\cliente\cliente.views.php');
+require_once('../wiews\pedido\pedido.views.php');
+require_once('../wiews\relacion\cleinte_pedido_views.php');
 
 $Cliente = new Cliente();
 $Pedido = new Pedido();
