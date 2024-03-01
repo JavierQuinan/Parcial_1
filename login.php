@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="central">
             <div id="login">
                 <div class="titulo">
-                  Mi Negocio Fquinteros
+                  BIENVENIDO PARCIAL 1 QUINTEROS
                 </div>
                 <form id="loginform" action="login.php" method="POST"> <!-- Añade el atributo action con el valor 'login.php' para enviar los datos al script PHP -->
                     <input type="email" name="correo" placeholder="Correo" required>
