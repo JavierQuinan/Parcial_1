@@ -76,11 +76,11 @@
                 // Recorrer los resultados y mostrarlos en la tabla
                 while ($fila = mysqli_fetch_array($resultado)) {
                     echo "<tr>";
-                    echo "<td>".$fila['ID_pedido']."</td>";
-                    echo "<td>".$fila['Fecha']."</td>";
-                    echo "<td>".$fila['Total']."</td>";
-                    echo "<td>".$fila['Estado']."</td>";
-                    echo "<td>".$fila['Método_pago']."</td>";
+                    echo "<td>" . $fila['ID_pedido'] . "</td>";
+                    echo "<td>" . $fila['Fecha'] . "</td>";
+                    echo "<td>" . $fila['Total'] . "</td>";
+                    echo "<td>" . $fila['Estado'] . "</td>";
+                    echo "<td>" . $fila['Metodo_pago'] . "</td>"; // Ajustado aquí
                     echo "</tr>";
                 }
 
@@ -92,4 +92,5 @@
         <a href="formulario_pedido.php" class="btn">Agregar Pedido</a>
     </div>
 </body>
+
 </html>
