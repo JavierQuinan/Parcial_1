@@ -21,6 +21,30 @@ class Realiza
         }
     }
 
-    // Otras funciones de Realiza aquí...
+}
+
+// Verificar si se enviaron datos por el formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verificar que se hayan recibido los datos esperados del formulario
+    if (isset($_POST['cliente_id']) && isset($_POST['pedido_id'])) {
+        // Obtener los datos del formulario
+        $cliente_id = $_POST['cliente_id'];
+        $pedido_id = $_POST['pedido_id'];
+
+        // Crear una instancia de la clase Realiza
+        $realiza = new Realiza();
+
+        // Insertar la relación en la base de datos
+        $resultado = $realiza->insertar($cliente_id, $pedido_id);
+
+        // Verificar si la inserción fue exitosa
+        if ($resultado) {
+            echo "La relación entre cliente y pedido se ha insertado correctamente.";
+        } else {
+            echo "Ha ocurrido un error al insertar la relación entre cliente y pedido.";
+        }
+    } else {
+        echo "No se recibieron todos los datos necesarios del formulario.";
+    }
 }
 ?>
