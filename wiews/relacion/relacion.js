@@ -6,7 +6,7 @@ function init() {
 }
 
 // Ruta para las operaciones en el controlador de relaciones
-var rutaRelacion = "../../controllers/relacion_cliente_pedido.php?op=";
+var rutaRelacion = "../controllers/relacion_cliente_pedido.php?op=";
 
 // Inicializar la función al cargar la página
 $().ready(() => {
