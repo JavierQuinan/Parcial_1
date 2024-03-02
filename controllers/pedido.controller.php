@@ -33,8 +33,8 @@ switch ($_GET['op']) {
         $Fecha = $_POST['Fecha'];
         $Total = $_POST['Total'];
         $Estado = $_POST['Estado'];
-        $Metodo_pago = $_POST['Metodo_pago'];
-        $resultado = $Pedido->insertar($Fecha, $Total, $Estado, $Metodo_pago); // Insertar un nuevo pedido
+        $Metodo_pago = $_POST['Método_pago'];
+        $resultado = $Pedido->insertar($Fecha, $Total, $Estado, $Método_pago); // Insertar un nuevo pedido
         if ($resultado) {
             echo json_encode("Pedido insertado correctamente.");
         } else {
@@ -46,8 +46,8 @@ switch ($_GET['op']) {
         $Fecha = $_POST['Fecha'];
         $Total = $_POST['Total'];
         $Estado = $_POST['Estado'];
-        $Metodo_pago = $_POST['Metodo_pago'];
-        $resultado = $Pedido->actualizar($ID_pedido, $Fecha, $Total, $Estado, $Metodo_pago); // Actualizar la información de un pedido
+        $Metodo_pago = $_POST['Método_pago'];
+        $resultado = $Pedido->actualizar($ID_pedido, $Fecha, $Total, $Estado, $Método_pago); // Actualizar la información de un pedido
         if ($resultado) {
             echo json_encode("Pedido actualizado correctamente.");
         } else {

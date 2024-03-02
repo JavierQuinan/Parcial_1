@@ -4,14 +4,14 @@ require_once('../config/conexion.php');
 class Pedido
 {
     /* Insertar un nuevo pedido */
-    public function insertar($Fecha, $Total, $Estado, $MetodoPago)
+    public function insertar($Fecha, $Total, $Estado, $Método_pago)
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
         $cadena = "INSERT INTO Pedido (Fecha, Total, Estado, Método_pago) VALUES (?, ?, ?, ?)";
 
         $stmt = mysqli_prepare($conn, $cadena);
-        mysqli_stmt_bind_param($stmt, 'siss', $Fecha, $Total, $Estado, $MetodoPago);
+        mysqli_stmt_bind_param($stmt, 'siss', $Fecha, $Total, $Estado, $Método_pago);
         $resultado = mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
@@ -51,14 +51,14 @@ class Pedido
     }
 
     /* Actualizar un pedido */
-    public function actualizar($ID_pedido, $Fecha, $Total, $Estado, $MetodoPago)
+    public function actualizar($ID_pedido, $Fecha, $Total, $Estado, $Método_pago)
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
         $cadena = "UPDATE Pedido SET Fecha = ?, Total = ?, Estado = ?, Método_pago = ? WHERE ID_pedido = ?";
 
         $stmt = mysqli_prepare($conn, $cadena);
-        mysqli_stmt_bind_param($stmt, 'sissi', $Fecha, $Total, $Estado, $MetodoPago, $ID_pedido);
+        mysqli_stmt_bind_param($stmt, 'sissi', $Fecha, $Total, $Estado, $Método_pago, $ID_pedido);
         $resultado = mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
