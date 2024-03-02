@@ -90,7 +90,7 @@
                     echo "<td>" . $fila['Fecha'] . "</td>";
                     echo "<td>" . $fila['Total'] . "</td>";
                     echo "<td>" . $fila['Estado'] . "</td>";
-                    echo "<td>" . $fila['Metodo_pago'] . "</td>"; // Ajustado aquí
+                    echo "<td>" . $fila['Metodo_pago'] . "</td>";
                     echo "</tr>";
                 }
 
