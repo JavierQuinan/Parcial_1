@@ -8,7 +8,7 @@ class Pedido
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
-        $cadena = "INSERT INTO Pedido (Fecha, Total, Estado, Metodo_pago) VALUES (?, ?, ?, ?)";
+        $cadena = "INSERT INTO pedido (Fecha, Total, Estado, Metodo_pago) VALUES (?, ?, ?, ?)";
 
         $stmt = mysqli_prepare($conn, $cadena);
         mysqli_stmt_bind_param($stmt, 'siss', $Fecha, $Total, $Estado, $Metodo_pago);
@@ -27,7 +27,7 @@ class Pedido
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
-        $cadena = "SELECT * FROM Pedido";
+        $cadena = "SELECT * FROM pedido";
 
         $resultados = mysqli_query($conn, $cadena);
         return $resultados;
@@ -38,7 +38,7 @@ class Pedido
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
-        $cadena = "SELECT * FROM Pedido WHERE ID_pedido = ?";
+        $cadena = "SELECT * FROM pedido WHERE ID_pedido = ?";
 
         $stmt = mysqli_prepare($conn, $cadena);
         mysqli_stmt_bind_param($stmt, 'i', $ID_pedido);
@@ -55,7 +55,7 @@ class Pedido
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
-        $cadena = "UPDATE Pedido SET Fecha = ?, Total = ?, Estado = ?, Metodo_pago = ? WHERE ID_pedido = ?";
+        $cadena = "UPDATE pedido SET Fecha = ?, Total = ?, Estado = ?, Metodo_pago = ? WHERE ID_pedido = ?";
 
         $stmt = mysqli_prepare($conn, $cadena);
         mysqli_stmt_bind_param($stmt, 'sissi', $Fecha, $Total, $Estado, $Metodo_pago, $ID_pedido);
@@ -70,7 +70,7 @@ class Pedido
     {
         $con = new ClaseConectar();
         $conn = $con->ProcedimientoConectar();
-        $cadena = "DELETE FROM Pedido WHERE ID_pedido = ?";
+        $cadena = "DELETE FROM pedido WHERE ID_pedido = ?";
 
         $stmt = mysqli_prepare($conn, $cadena);
         mysqli_stmt_bind_param($stmt, 'i', $ID_pedido);

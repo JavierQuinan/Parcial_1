@@ -3,7 +3,7 @@
 error_reporting(0);
 require_once('../config/sesiones.php');
 require_once('../models/pedido.models.php'); 
-require_once('../wiews\pedido\pedido.views.php'); 
+require_once('../wiews/pedido/pedido.views.php'); 
 $Pedido = new Pedido(); // Crear una instancia del modelo de Pedido
 
 switch ($_GET['op']) {
