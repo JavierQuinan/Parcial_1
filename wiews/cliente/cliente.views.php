@@ -45,7 +45,6 @@
             </tbody>
         </table>
         <a href="formulario_cliente.php" class="btn">Agregar Cliente</a>
-        <!-- Enlace al formulario para agregar un nuevo cliente -->
     </div>
 </body>
 </html>
