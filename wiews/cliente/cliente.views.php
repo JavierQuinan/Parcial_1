@@ -79,8 +79,8 @@
                     echo "<td>".$fila['ID_cliente']."</td>";
                     echo "<td>".$fila['Nombre']."</td>";
                     echo "<td>".$fila['Email']."</td>";
-                    echo "<td>".$fila['Teléfono']."</td>";
-                    echo "<td>".$fila['Dirección']."</td>";
+                    echo "<td>".$fila['Telefono']."</td>";
+                    echo "<td>".$fila['Direccion']."</td>";
                     echo "</tr>";
                 }
 
